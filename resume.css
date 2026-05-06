@@ -1,0 +1,117 @@
+:root {
+  --bg: #f4f5ff;
+  --sidebar: linear-gradient(160deg, #6a11cb, #2575fc, #00c9ff);
+  --text: #20253a;
+  --light: #ffffff;
+  --accent: #ff6b6b;
+  --muted: #5f6d92;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 2rem 1rem;
+}
+
+.resume-wrapper {
+  width: min(1050px, 95%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(32, 37, 58, 0.15);
+  background: var(--light);
+}
+
+.sidebar {
+  background: var(--sidebar);
+  color: var(--light);
+  padding: 2rem 1.3rem;
+}
+
+.sidebar h1 {
+  font-size: 1.9rem;
+}
+
+.role {
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar section {
+  margin-top: 1.3rem;
+}
+
+.sidebar h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #ffe8ff;
+}
+
+.sidebar ul {
+  padding-left: 1rem;
+}
+
+.sidebar li,
+.sidebar p {
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+
+.content {
+  padding: 2rem 1.8rem;
+}
+
+.content section + section {
+  margin-top: 1.2rem;
+}
+
+.content h2 {
+  color: #3748a5;
+  margin-bottom: 0.45rem;
+  position: relative;
+}
+
+.content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 52px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 20px;
+}
+
+.content h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.content ul {
+  padding-left: 1.1rem;
+}
+
+.content li {
+  margin-bottom: 0.35rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 820px) {
+  .resume-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
